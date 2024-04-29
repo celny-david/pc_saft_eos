@@ -1,0 +1,36 @@
+! === This is the default input file ===
+! first nonempty uncommented('!' or '#') line is taken as arguments
+! program accept comand line parameters in following format where SPACE=' '
+! all entities are mandatory
+! === FORMAT ===
+! :"component(s)":SPACE"molar ratio(s)"SPACE"temperature"SPACE"density"SPACE"k_ij"SPACE"computed properties flag(s)"
+! === SPECIFICATION ===
+! - "component(s)" denotes computed components
+!   * in form :first component,second component2,...: i.e. :methane,carbon dioxide:
+! - "molar ratio(s)" is always required! it is i.e. 1.0 or 0.57,0.43 ...
+! - "temperature" is single positive number representing temperature in kelvins i.e. 200
+!	* parser is capable of handling both integer 200 and float 200.0 input
+! - "density" is single positive number representing computation density in mol/m^3 i.e. 997
+!	* parser is capable of handling both integer 997 and float 997.0 input
+! - "k_ij" is binary interaction coeffitient - it is single number i.e. 0
+!	* parser is capable of handling both integer 0 and float 0.0 input
+! - "computed properties flag(s)" request for the computed outputs - only the requested will be printed/outputed
+!		even when other useful parameters are also computed i.e. p,mu,fug
+!	*	p	 - pressure computation
+!	*	pp	 - first density derivative of pressure
+!	*	ppp	 - second density derivative of pressure
+!	*	mu	 - chemical potentials in same order as names
+!	*	fug	 - fugacity coeffitient in same order as names
+!	*	a	 - Helmholtz energy A
+!	*	h	 - Entalpy H - residual part
+!	*	s	 - Entropy S - residual part
+!	*	g	 - Gibbs energy G - residual part
+!	*	1/2/3- control over numerical difference (if enabled in code)
+
+! === DEFAULT ===
+!:methane: 0.2,0.8 350 997 0 p,pp,ppp,mu,fug,a,h,s,g
+
+!:methane,ethane: 0.2,0.8 350 997 0 p,pp,ppp,mu,fug,a,h,s,g
+
+:methane,ethane,propane: 0.2,0.3,0.5 350 997 0 p,pp,ppp,mu,fug,a,h,s,g
+

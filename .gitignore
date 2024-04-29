@@ -1,0 +1,37 @@
+
+# general ignores
+.*
+*.orig
+# except this gitignore
+!.gitignore
+
+# specifics to fortran generated mod files
+*.mod
+*genmod.*
+
+# compiled resources
+*.a
+*.so
+*.lib
+*.dll
+pcsaft
+pcsaft_static_exec
+pcsaft_dynamic_exec
+
+# exclude cmake dir content intended for local usage
+cmake*/
+CMakeFiles*
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# make sure the testing sripts are included
+!make/library_dynamic/test_FORTRAN_MATLAB_interface.m
+!make/library_dynamic/test_FORTRAN_python_interface.py
+
+# exclude testing directory apart the exceptions
+test/*
+
+## exceptions
+!test/test_*
+!*CMakeLists.txt

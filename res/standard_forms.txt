@@ -1,0 +1,42 @@
+===============================================
+== Here is the brief overview of standard    ==
+==  function subroutine and module for easy  ==
+==  copy-paste purposes                      ==
+==                          by David Celny   == 
+==! only "-" needs to be replaced for names !==
+===============================================
+function ---_fun(-) result (-)
+! brief description of the function
+! important notes and comments
+	use control_mod , only: dp, -
+	implicit none
+! variable section
+
+end function ---_fun
+===============================================
+subroutine ---_sub
+! brief description of the subroutine
+! important notes and comments
+	use control_mod , only: dp, -
+	implicit none
+! variable section
+
+end subroutine ---_sub
+===============================================
+module ---_mod
+! brief description of the module
+! important notes and comments
+	use control_mod , only: dp, -
+	implicit none
+	
+	private
+	public !list the public methods
+
+! variable section
+
+	contains
+
+		!the subroutines and functions
+
+end module ---_mod
+===============================================

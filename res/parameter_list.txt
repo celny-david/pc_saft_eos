@@ -1,0 +1,43 @@
+! = ================================================================ =
+! =	This is the PC-SAFT parameter list of possible components		 =
+! =	The general format resembles the XML encoding tags				 =
+! =		1) if line beggins with "!" then this line is ignored		 =
+! =			-substance has to be commented in both names parameters	 =
+! =		2) we use the 	<names></names> and							 =
+! =						<parameters></parameters> tags				 =
+! =		3) for the human readability the proper indetation is used	 =
+! =			-TAB should be 4 spaces long							 =
+! =		4) !the same order has to be kept for names and parameters!	 =
+! = ================================================================ =
+! =		Database by V. VINŠ, Institure of Thermomechanics of the CAS =
+! =		Program by D. CELNÝ, Institure of Thermomechanics of the CAS =
+! = ================================================================ =
+! =		REDUCED VERSION FROM 29.04.2024								 =
+! = ================================================================ =
+
+<names>
+    methane
+    ethane
+    propane
+    butane
+    n-pentane
+    n-hexane
+    n-heptane
+    n-octane
+    n-nonane
+    n-decane
+</names>
+
+!	m[-]		sigma[A]	e/k[K] 		kapAB[-] 	eAB/k[K] 	u[Debye] 	n_u[-] 	q[DA] 	n_q[-] 	M[kg/mol]		bond		name
+<parameters>
+	1			3.7039		150.03		0			0			0			0		0		0		0.016043		0		!	methane									1
+	1.60682052	3.5206		191.42		0			0			0			0		0		0		0.03007			0		!	ethane									1
+	2.001826112	3.6184		208.11		0			0			0			0		0		0		0.044096		0		!	propane									1
+	2.342124408	3.7024		222.38		0			0			0			0		0		0		0.058123		0		!	butane									1
+	2.689530734	3.7729		231.2		0			0			0			0		0		0		0.072146		0		!	n-pentane								1
+	3.057646137	3.7983		236.77		0			0			0			0		0		0		0.086177		0		!	n-hexane								1
+	3.483256686	3.8049		238.4		0			0			0			0		0		0		0.100203		0		!	n-heptane								1
+	3.817942713	3.8373		242.78		0			0			0			0		0		0		0.114231		0		!	n-octane								1
+	4.2073695	3.8448		244.51		0			0			0			0		0		0		0.12825			0		!	n-nonane								1
+	4.66324859	3.8384		243.87		0			0			0			0		0		0		0.142285		0		!	n-decane								1
+</parameters>
